@@ -19,8 +19,9 @@ public class OrdenaStrings {
 		palavras.sort(comparador);
 		System.out.println(palavras);
 		
-		Consumer<String> consumidor = new ImprimeNaLinha();
-		palavras.forEach(consumidor);
+		Consumer<String> consumidorLinha = new ImprimeNaLinha();
+		Consumer<String> consumidorJunto = new ImprimeTudoJunto();
+		palavras.forEach(consumidorLinha);
 	}
 }
 
@@ -29,6 +30,15 @@ class ImprimeNaLinha implements Consumer<String> {
 	@Override
 	public void accept(String s) {
 		System.out.println(s);
+		
+	}
+}
+
+class ImprimeTudoJunto implements Consumer<String> {
+
+	@Override
+	public void accept(String s) {
+		System.out.print(s);
 		
 	}
 }
