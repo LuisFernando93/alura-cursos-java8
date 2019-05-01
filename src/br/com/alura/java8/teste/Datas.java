@@ -26,6 +26,6 @@ public class Datas {
 		DateTimeFormatter formatadorComHora = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm");
 		
 		System.out.println(hoje.format(formatador));
-		System.out.println(hojeEmNovaYork.format(formatador));
+		System.out.println(hojeEmNovaYork.format(formatadorComHora));
 	}
 }
